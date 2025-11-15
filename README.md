@@ -1,41 +1,41 @@
-# ZVidDown – Videó Letöltő
+# ZVidDown – Video Downloader
 
-Ez egy egyszerű, grafikus felületű videóletöltő alkalmazás, amellyel YouTube és más támogatott oldalakról tölthetsz le videót, hangot vagy csak videót.
+This is a simple graphical video downloader application that allows you to download video, audio, or just video from YouTube and other supported sites.
 
-## Fő funkciók
+## Main Features
 
-- Videó + hang letöltése
-- Csak hang (mp3) letöltése
-- Csak videó letöltése
-- Felbontás választás (elérhető opciók)
-- Kimeneti mappa kiválasztása
-- Letöltési folyamat kijelzése
-- Széleskörű weboldal támogatás (YouTube, Videa, stb.)
+- Download video + audio
+- Download audio only (mp3)
+- Download video only
+- Resolution selection (available options)
+- Choose output folder
+- Download progress display
+- Wide website support (YouTube, Videa, etc.)
 
-## Technológiák
+## Technologies
 
 - Python 3
-- Tkinter (grafikus felület)
-- yt-dlp (videóletöltés)
-- ffmpeg, ffprobe (médiafeldolgozás)
+- Tkinter (GUI)
+- yt-dlp (video downloading)
+- ffmpeg, ffprobe (media processing)
 
-## Telepítés és futtatás
+## Installation and Usage
 
-### 1. Előre lefordított verzió (ajánlott)
+### 1. Pre-built Version (Recommended)
 
-Ha nem szeretnél semmit telepíteni, használd a mellékelt `ZVidDown.exe` vagy a jövőben elérhető `ZVidDown_installer.exe` fájlt.
+If you don't want to install anything, use the included `ZVidDown.exe` or the upcoming `ZVidDown_installer.exe` file.
 
-1. Töltsd le a `ZVidDown.exe`-t vagy a `ZVidDown_installer.exe`-t.
-2. Futtasd a fájlt (telepítő esetén kövesd az utasításokat).
-3. Az ffmpeg.exe és az ffprobe.exe a ZvidDown.exe-nél (sem az installer-nél) nem kell őket telepíteni, mert az exe-be be van csomagolva, és a program magából eléri. de a main.py nél ott kell ezeknek lennie abban a mappában ahol a main.py. van
+1. Download `ZVidDown.exe` or `ZVidDown_installer.exe`.
+2. Run the file (for the installer, follow the instructions).
+3. You do not need to install ffmpeg.exe and ffprobe.exe for ZVidDown.exe (or the installer), as they are bundled inside the exe and the program can access them internally. For main.py, these files must be present in the same folder as main.py.
 
-### 2. Saját build készítése (fejlesztőknek)
+### 2. Build Your Own (For Developers)
 
-Szükséges:
+Requirements:
 - Python 3
-- pip csomagkezelő
+- pip package manager
 
-Telepítsd a szükséges csomagokat:
+Install the required packages:
 ```sh
 pip install yt-dlp
 ```
@@ -43,18 +43,30 @@ pip install yt-dlp
 pip install pyinstaller
 ```
 
-Majd készítsd el az exe-t a következő paranccsal (lásd `make_exe.txt`):
+Then build the exe with the following command (see `make_exe.txt`):
 ```sh
 pyinstaller --onefile --noconsole --icon=icon.ico --noupx --add-binary "ffmpeg.exe;." --add-binary "ffprobe.exe;." main.py
 ```
 
-Az elkészült futtatható fájl a `dist` mappában lesz.
+The executable will be in the `dist` folder.
 
-## Használat
+## Usage
 
-1. Indítsd el a programot (`ZVidDown.exe` vagy a telepítő által létrehozott parancsikonnal).
-2. Illeszd be a letölteni kívánt videó URL-jét.
-3. Válaszd ki a letöltési módot (videó+hang, csak hang, csak videó).
-4. Válaszd ki a felbontást (ha elérhető).
-5. Állítsd be a kimeneti mappát.
-6. Kattints a Letöltés gombra.
+1. Start the program (`ZVidDown.exe` or the shortcut created by the installer).
+2. Paste the URL of the video you want to download.
+3. Select the download mode (video+audio, audio only, video only).
+4. Select the resolution (if available).
+5. Set the output folder.
+6. Click the Download button.
+
+## Multilanguage (Language Selection)
+
+The program supports multiple languages. By default, you can choose between English and Hungarian.
+
+You can select the language in the three-dot (⋮) menu at the top right, under the "Language" menu. The selected language will be saved and remembered after restarting the program.
+
+### Adding or Using More Languages
+
+If you want to add/use more languages, download the `more_languages.json` file and place it in the same folder as `main.py` or `ZVidDown.exe`. (The ZVidDown_installer automatically installs the more_languages.json file into the program folder.)
+
+If this file is present, the program will automatically offer the languages listed in it in the menu. If not, only the default English and Hungarian will be available.
