@@ -1,4 +1,0 @@
-Ezennel telepíteni fogja a ZVidDown szoftvert.
-
-További információért, és a forráskód
-megtekintésére tekintse meg ezt a weboldalt: https://github.com/zpro11/ZVidDown
