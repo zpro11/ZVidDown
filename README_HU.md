@@ -29,6 +29,8 @@ Keresd meg a legfrisseb verziót a következő weboldalon: https://github.com/zp
 2. A ZIP esetén bonsd ki a tömörített archívumot, és futtasd (telepítő esetén kövesd az utasításokat).
 3. Az ffmpeg.exe és az ffprobe.exe a ZvidDown.exe-nél (sem az installer-nél) nem kell őket külön telepíteni, mert az exe-hez be van csomagolva, és a program eléri. de ha nyersen a main.py-t szeretnéd tuttatni, ott ezeknek abban a mappában kell lennie ahol a main.py van.
 
+(Az Installer az Inno Setup Compiler nevű szoftverrel készült)
+
 ### 2. main.py futtatása
 
 Szükséges:

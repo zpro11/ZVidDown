@@ -29,6 +29,8 @@ Find the latest version here: https://github.com/zpro11/ZVidDown/releases
 2. For the ZIP, extract the archive and run the program (for the installer, follow the instructions).
 3. For ZVidDown.exe (and the installer), you do not need to install ffmpeg.exe and ffprobe.exe separately, as they are bundled with the exe and accessible by the program. However, if you want to run main.py directly, these files must be in the same folder as main.py.
 
+(The installer was created using software called Inno Setup Compiler.)
+
 ### 2. Running main.py
 
 Requirements:
